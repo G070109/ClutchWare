@@ -25,6 +25,7 @@ st.image(logo_let)
 
 st.header("Player Analyzer")
 st.markdown("Artificial Intelligence NBA Player Prop Predictor")
+st.caption('Created by @maldonavi  &  @Guiller0701')
 
 
 
