@@ -23,7 +23,7 @@ Select_OPP=["Atlanta Hawks","Brooklyn Nets","Boston Celtics","Charlotte Hornets"
 
 st.image(logo_let)
 
-st.header("Data Analyzer 2021-2022")
+st.header("Player Analyzer")
 st.markdown("Artificial Intelligence NBA Player Prop Predictor")
 
 
