@@ -9,7 +9,7 @@ from PIL import Image
 
 logo_let = Image.open('data//C-La.png')
 logo_ic = Image.open('data//C-L5.png')
-st.set_page_config(page_title="ClutchWare",page_icon=logo_ic)
+st.set_page_config(page_title="ClutchWare-Player",page_icon=logo_ic)
 Select_Pos=['PG','SG','SF','PF','C']
 Select_Stat=['PTS','TRB','AST','3P','STL','BLK','TOV']
 Write_Player = ""
