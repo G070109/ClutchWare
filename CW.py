@@ -310,7 +310,7 @@ if a:
         elif Opp_Percentage[0] == "Washington Wizards":
             tm_ex = 29
 
-        Loc_def_P = Pos_vs_def.iloc[[tm_ex], ["FG%"]]
+        Loc_def_P = Pos_vs_def.iloc[[tm_ex], [8]]
         Opp_P_r = Loc_def_P.astype(np.float64)
         Opp_plt= np.asarray(Opp_P_r)
 
