@@ -200,7 +200,7 @@ if a:
             elif rival == "WAS":
                 tm_ex = 29
 
-            Loc_def = Pos_vs_def.iloc[[tm_ex], [8]]
+            Loc_def = Pos_vs_def.iloc[[tm_ex], [pr_ex]]
             Loc_def_Ar = np.asarray(Loc_def)
             Ar_Def = np.append(Ar_Def, [Loc_def_Ar])
 
@@ -310,7 +310,7 @@ if a:
         elif Opp_Percentage[0] == "Washington Wizards":
             tm_ex = 29
 
-        Loc_def_P = Pos_vs_def.iloc[[tm_ex], [8]]
+        Loc_def_P = Pos_vs_def.iloc[[tm_ex], [pr_ex]]
         Opp_P_r = Loc_def_P.astype(np.float64)
         Opp_plt= np.asarray(Opp_P_r)
 
