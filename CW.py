@@ -102,7 +102,7 @@ if a:
 
         Opp = dfplayer["Opp"].iloc[Last_n_Games[0]:]
         N_Ga = dfplayer["Rk"].iloc[Last_n_Games[0]:]
-        PropPr = dfplayer[Prop_in].iloc[Last_n_Games[0]:]
+        PropPr = dfplayer["FG%"].iloc[Last_n_Games[0]:]
         N_Ga_A = np.asarray(N_Ga)
         riv = np.asarray(Opp)
         Ar_Def = np.zeros(0)
