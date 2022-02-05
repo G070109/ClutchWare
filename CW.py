@@ -19,7 +19,7 @@ Select_OPP=["Atlanta Hawks","Brooklyn Nets","Boston Celtics","Charlotte Hornets"
         "Detroit Pistons","Golden State Warriors","Houston Rockets","Indiana Pacers","Los Angeles Clippers","Los Angeles Lakers","Memphis Grizzlies","Miami Heat",
         "Milwaukee Bucks","Minnesota Timberwolves","New Orleans Pelicans","New York Knicks","Oklahoma City Thunder","Orlando Magic","Philadelphia 76ers","Phoenix Suns",
         "Portland Trail Blazers","Sacramento Kings","San Antonio Spurs","Toronto Raptors","Utah Jazz","Washington Wizards"]
-
+Select_Opti = ['Adam','Adadelta','Adagrad','Adamax','Nadam','Ftrl','RMSprop']
 
 st.image(logo_let)
 
@@ -35,6 +35,7 @@ Pos=st.sidebar.multiselect('Position',Select_Pos)
 Prop_in=st.sidebar.multiselect('Prop',Select_Stat)
 Last_n_Games_b=st.sidebar.multiselect('Last Games',Select_Last_Games)
 Bt_line=st.sidebar.text_input("Bet Line")
+opt= st.sidebar.multiselect("Optimizer",Select_Opti)
 Last_n_Games=np.dot(Last_n_Games_b, -1)
 def Extraer_nombre(cadena, n1=5, n2=2):
     esp = Player_nm.index(' ')
