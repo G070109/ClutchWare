@@ -35,7 +35,7 @@ Pos=st.sidebar.multiselect('Position',Select_Pos)
 Prop_in=st.sidebar.multiselect('Prop',Select_Stat)
 Last_n_Games_b=st.sidebar.multiselect('Last Games',Select_Last_Games)
 Bt_line=st.sidebar.text_input("Bet Line")
-opt= st.sidebar.multiselect("Optimizer",Select_Opti,[0])
+opt= st.sidebar.multiselect("Optimizer",Select_Opti,0)
 Last_n_Games=np.dot(Last_n_Games_b, -1)
 def Extraer_nombre(cadena, n1=5, n2=2):
     esp = Player_nm.index(' ')
