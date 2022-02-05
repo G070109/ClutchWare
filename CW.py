@@ -325,6 +325,22 @@ if a:
         Defense_df = pd.DataFrame(Defense, columns=["Defense Avg."])
         Tabla_chido = pd.concat([Player_df, Defense_nm_df,Defense_df,N_Ga_df],axis=1)
         Opp_P = pd.DataFrame(Opp_plt, columns=["%"])
+        
+        
+        if opt[0] =="Adam":
+           optimizer=tf.keras.optimizers.Adam(0.01)
+        elif opt[0] =="Adadelta":
+           optimizer=tf.keras.optimizers.Adadelta(0.01)
+        elif opt[0] =="Adagrad":
+           optimizer=tf.keras.optimizers.Adagrad(0.01)
+        elif opt[0] =="Adamax":
+          optimizer=tf.keras.optimizers.Adamax(0.01)
+        elif opt[0] =="Nadam":
+          optimizer=tf.keras.optimizers.Nadam(0.01)
+        elif opt[0] =="Ftrl":
+          optimizer= tf.keras.optimizers.Ftrl(0.01)
+        elif opt[0] =="RMSprop":
+          optimizer= tf.keras.optimizers.RMSprop(0.01)
 
 
 
@@ -338,7 +354,7 @@ if a:
         salida = tf.keras.layers.Dense(units=1)
         modelo = tf.keras.Sequential([oculta1, oculta2, salida])
         modelo.compile(
-            optimizer=tf.keras.optimizers.Adam(0.001),
+            optimizer,
             loss='mean_squared_error'
         )
 
