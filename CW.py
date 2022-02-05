@@ -35,7 +35,7 @@ Pos=st.sidebar.multiselect('Position',Select_Pos)
 Prop_in=st.sidebar.multiselect('Prop',Select_Stat)
 Last_n_Games_b=st.sidebar.multiselect('Last Games',Select_Last_Games)
 Bt_line=st.sidebar.text_input("Bet Line")
-opt= st.sidebar.multiselect("Optimizer",Select_Opti)
+opt= st.sidebar.multiselect("Optimizer",Select_Opti,[0])
 Last_n_Games=np.dot(Last_n_Games_b, -1)
 def Extraer_nombre(cadena, n1=5, n2=2):
     esp = Player_nm.index(' ')
@@ -330,17 +330,17 @@ if a:
         if opt[0] =="Adam":
            optimizer=tf.keras.optimizers.Adam(0.01)
         elif opt[0] =="Adadelta":
-           optimizer=tf.keras.optimizers.Adadelta(0.01)
+           optimizer=tf.keras.optimizers.Adadelta(0.001)
         elif opt[0] =="Adagrad":
-           optimizer=tf.keras.optimizers.Adagrad(0.01)
+           optimizer=tf.keras.optimizers.Adagrad(0.001)
         elif opt[0] =="Adamax":
-          optimizer=tf.keras.optimizers.Adamax(0.01)
+          optimizer=tf.keras.optimizers.Adamax(0.001)
         elif opt[0] =="Nadam":
-          optimizer=tf.keras.optimizers.Nadam(0.01)
+          optimizer=tf.keras.optimizers.Nadam(0.001)
         elif opt[0] =="Ftrl":
-          optimizer= tf.keras.optimizers.Ftrl(0.01)
+          optimizer= tf.keras.optimizers.Ftrl(0.001)
         elif opt[0] =="RMSprop":
-          optimizer= tf.keras.optimizers.RMSprop(0.01)
+          optimizer= tf.keras.optimizers.RMSprop(0.001)
 
 
 
