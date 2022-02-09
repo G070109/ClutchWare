@@ -214,7 +214,7 @@ if a:
 
         for Ar_i in Ar_Player:
 
-            if Ar_i == "Inactive" or Ar_i == "Did Not Play":
+            if Ar_i == "Inactive" or Ar_i == "Did Not Play" or Ar_i == "Did Not Dress" :
                Ar_Player[Ar_num[0]] = 0
                Ar_Def[Ar_num[0]] = 0
                Ar_Player[Ar_num1[0]] = 0
