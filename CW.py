@@ -214,7 +214,7 @@ if a:
         Ar_num1 = np.where(Ar_Player == "Did Not Play")
         Ar_num1 = np.asarray(Ar_num1)
         Ar_num2 = np.where(Ar_Player == "Did Not Dress")
-        Ar_num2 = np.asarray(Ar_num1)
+        Ar_num2 = np.asarray(Ar_num2)
         for Ar_i in Ar_Player:
 
             if Ar_i == "Inactive" or Ar_i == "Did Not Play" or Ar_i == "Did Not Dress" :
