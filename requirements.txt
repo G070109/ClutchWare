@@ -6,3 +6,4 @@ Pillow==9.0.0
 plotly==5.5.0
 streamlit==1.4.0
 tensorflow==2.7.0
+html5lib==1.0.1
