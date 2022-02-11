@@ -6,7 +6,7 @@ import lxml
 import plotly.graph_objects as go
 import plotly.express as px
 import html5lib
-import BeautifulSoup4
+import beautifulsoup4
 from PIL import Image
 
 logo_let = Image.open('data//C-La.png')
