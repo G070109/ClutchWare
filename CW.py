@@ -215,15 +215,22 @@ if a:
         Ar_num1 = np.asarray(Ar_num1)
         Ar_num2 = np.where(Ar_Player == "Did Not Dress")
         Ar_num2 = np.asarray(Ar_num2)
+        Ar_num3 = np.where(Ar_Player == "Not With Team")
+        Ar_num3 = np.asarray(Ar_num3)
+        
+        
         for Ar_i in Ar_Player:
 
-            if Ar_i == "Inactive" or Ar_i == "Did Not Play" or Ar_i == "Did Not Dress" :
+            if Ar_i == "Inactive" or Ar_i == "Did Not Play" or Ar_i == "Did Not Dress" or Ar_i == "Not With Team":
                Ar_Player[Ar_num[0]] = 0
                Ar_Def[Ar_num[0]] = 0
                Ar_Player[Ar_num1[0]] = 0
                Ar_Def[Ar_num1[0]] = 0
                Ar_Player[Ar_num2[0]] = 0
                Ar_Def[Ar_num2[0]] = 0
+               Ar_Player[Ar_num3[0]] = 0
+               Ar_Def[Ar_num3[0]] = 0
+
 
 
         if Opp_Percentage[0] == 'Atlanta Hawks':
