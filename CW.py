@@ -5,6 +5,7 @@ import tensorflow as tf
 import lxml
 import plotly.graph_objects as go
 import plotly.express as px
+import html5lib
 from PIL import Image
 
 logo_let = Image.open('data//C-La.png')
