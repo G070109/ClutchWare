@@ -213,7 +213,7 @@ if a:
         Ar_num= np.asarray(Ar_num)
         Ar_num1 = np.where(Ar_Player == "Did Not Play")
         Ar_num1 = np.asarray(Ar_num1)
-
+        st.write(Ar_Player)
         for Ar_i in Ar_Player:
 
             if Ar_i == "Inactive" or Ar_i == "Did Not Play" or Ar_i == "Did Not Dress" :
