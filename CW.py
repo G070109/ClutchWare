@@ -76,7 +76,7 @@ if a:
         dftb = df[7]
 
         try:
-            dfplayer = dftb.drop(dftb.index [[20,41]])
+            dfplayer = dftb.drop(dftb.index [[20,41,62]])
         except IndexError:
             dfplayer = dftb.drop(dftb.index [[20]])
 
