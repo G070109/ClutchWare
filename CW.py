@@ -72,6 +72,7 @@ if a:
                                        Player_nm_l) + '04/gamelog/2023')
                                        df = pd.read_html(urlpla, header=0)
                                  except ValueError:
+                                        urlpla = 1
                                 
                                 
                 
