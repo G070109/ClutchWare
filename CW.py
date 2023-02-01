@@ -15,7 +15,7 @@ st.set_page_config(page_title="ClutchWare-Player",page_icon=logo_ic)
 Select_Pos=['PG','SG','SF','PF','C']
 Select_Stat=['PTS','TRB','AST','3P','STL','BLK','TOV']
 Write_Player = ""
-Select_Last_Games = ""
+Select_Last_Games = [5,7,10,15,20]
 Write_Bt_Line=0
 Select_OPP=["Atlanta Hawks","Brooklyn Nets","Boston Celtics","Charlotte Hornets","Chicago Bulls","Cleveland Cavaliers","Dallas Mavericks","Denver Nuggets",
         "Detroit Pistons","Golden State Warriors","Houston Rockets","Indiana Pacers","Los Angeles Clippers","Los Angeles Lakers","Memphis Grizzlies","Miami Heat",
@@ -35,7 +35,7 @@ Player_nm=st.sidebar.text_input("Player Name", Write_Player)
 Opp_Percentage=st.sidebar.multiselect('VS.',Select_OPP)
 Pos=st.sidebar.multiselect('Position',Select_Pos)
 Prop_in=st.sidebar.multiselect('Prop',Select_Stat)
-Last_n_Games_b=st.sidebar.text_input('Last Games',Select_Last_Games)
+Last_n_Games_b=st.sidebar.multiselect('Last Games',Select_Last_Games,10)
 Bt_line=st.sidebar.text_input("Bet Line")
 opt= st.sidebar.multiselect("Optimizer",Select_Opti,"Adam")
 Last_n_Games=np.dot(Last_n_Games_b, -1)
