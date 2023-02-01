@@ -64,7 +64,7 @@ if a:
                               urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
                               Player_nm_l) + '03/gamelog/2023')
                               df = pd.read_html(urlpla, header=0)
-                          except ValueError:
+                         except ValueError:
                                  try:
                                        urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
                                        Player_nm_l) + '04/gamelog/2023')
