@@ -49,12 +49,14 @@ Player_nm_l = Player_nm.lower()
 
 a=st.sidebar.button("Analyze")
 if a:
-        try:
+        
+        def n():
+          try:
             urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
             Player_nm_l) + '01/gamelog/2023')
             print(urlpla)
             df = pd.read_html(urlpla, header=0)
-        except ValueError:
+          except ValueError:
                 try:
                      urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
                      Player_nm_l) + '02/gamelog/2023')
@@ -76,7 +78,7 @@ if a:
          
          
                 
-
+          return df
 
         if Pos[0]=='PG':
             urldef = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=0&single=true&output=csv'
@@ -90,6 +92,7 @@ if a:
             urldef ='https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=831757291&single=true&output=csv'
 
         Pos_vs_def = pd.read_csv(urldef)
+        n()=df
         len(df)
         dftb = df[7]
 
