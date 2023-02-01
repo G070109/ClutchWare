@@ -50,36 +50,24 @@ Player_nm_l = Player_nm.lower()
 a=st.sidebar.button("Analyze")
 if a:
         
-        def n():
-          try:
+        
+        try:
             urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
             Player_nm_l) + '01/gamelog/2023')
             print(urlpla)
             df = pd.read_html(urlpla, header=0)
-          except ValueError:
-                try:
-                     urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
-                     Player_nm_l) + '02/gamelog/2023')
-                     df = pd.read_html(urlpla, header=0)
-                except ValueError:
-                         try:
-                              urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
-                              Player_nm_l) + '03/gamelog/2023')
-                              df = pd.read_html(urlpla, header=0)
-                         except ValueError:
-                                 try:
-                                       urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
-                                       Player_nm_l) + '04/gamelog/2023')
-                                       df = pd.read_html(urlpla, header=0)
-                                 except ValueError:
-                                        urlpla = 1
-                                
+        except ValueError:
+              
+            urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
+            Player_nm_l) + '02/gamelog/2023')
+            df = pd.read_html(urlpla, header=0)
+                
                                 
                 
          
          
                 
-          return df
+          
 
         if Pos[0]=='PG':
             urldef = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=0&single=true&output=csv'
