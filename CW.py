@@ -51,13 +51,31 @@ a=st.sidebar.button("Analyze")
 if a:
         try:
             urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
-            Player_nm_l) + '01/gamelog/2022')
+            Player_nm_l) + '01/gamelog/2023')
             print(urlpla)
             df = pd.read_html(urlpla, header=0)
         except ValueError:
-            urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
-            Player_nm_l) + '02/gamelog/2022')
-            df = pd.read_html(urlpla, header=0)
+                 try:
+                     urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
+                     Player_nm_l) + '02/gamelog/2023')
+                     df = pd.read_html(urlpla, header=0)
+                 except ValueError:
+                         try:
+                              urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
+                              Player_nm_l) + '03/gamelog/2023')
+                              df = pd.read_html(urlpla, header=0)
+                          except ValueError:
+                                 try:
+                                       urlpla = ('https://www.basketball-reference.com/players/' + Extraer_inicial(Player_nm_l) + '/' + Extraer_nombre(
+                                       Player_nm_l) + '04/gamelog/2023')
+                                       df = pd.read_html(urlpla, header=0)
+                                 except ValueError:
+                                
+                                
+                
+         
+         
+                
 
 
         if Pos[0]=='PG':
