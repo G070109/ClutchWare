@@ -451,7 +451,7 @@ if a:
         if Sum == 0:
             Avg_UN = 0
             text_UN = "Never has been UNDER the line"
-            m4.metric(label=text_UN, value=0 + " " + str(Prop_in[0]), delta="with an average of ",delta_color="off")
+            m4.metric(label=text_UN, value="0" + " " + str(Prop_in[0]), delta="with an average of ",delta_color="off")
         else:
             Avg_UN = Sum / Cant
             text_UN = "Did the UNDER "+ str(Bt_line) + "  - " + str(Cant) + " time(s)"
