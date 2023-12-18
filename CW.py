@@ -112,8 +112,9 @@ if a:
         elif Prop_in[0] == "TOV":
             pr_ex = 7
 
-
+        
         Opp = dfplayer["Opp"].iloc[Last_n_Games[0]:]
+        st.write(dfplayer["Opp"])
         N_Ga = dfplayer["Rk"].iloc[Last_n_Games[0]:]
         PropPr = dfplayer[Prop_in].iloc[Last_n_Games[0]:]
         N_Ga_A = np.asarray(N_Ga)
