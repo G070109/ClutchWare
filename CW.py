@@ -84,7 +84,7 @@ if a:
         
         len(df)
         dftb = df[7]
-
+        st.table(dftb)
         """try:
             dfplayer = dftb.drop(dftb.index [[20,41,62]])
         except IndexError:
