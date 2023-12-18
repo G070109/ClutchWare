@@ -84,7 +84,7 @@ if a:
         
         len(df)
         dftb = df[7]
-        st.table(dftb)
+        
         try:
             dfplayer = dftb.drop(dftb.index [[20,41,62]])
         except IndexError:
@@ -114,7 +114,7 @@ if a:
 
         
         Opp = dfplayer["Opp"].iloc[Last_n_Games[0]:]
-        st.write(dfplayer["Opp"])
+ 
         N_Ga = dfplayer["Rk"].iloc[Last_n_Games[0]:]
         PropPr = dfplayer[Prop_in].iloc[Last_n_Games[0]:]
         N_Ga_A = np.asarray(N_Ga)
