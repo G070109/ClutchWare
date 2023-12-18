@@ -122,17 +122,17 @@ if a:
           
 
         if Pos[0]=='PG':
-            urldef = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=0&single=true&output=csv'
+                Pos_vs_def = se_pg
         elif Pos[0]=='SG':
-            urldef = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=503690944&single=true&output=csv'
+                Pos_vs_def = se_sg
         elif Pos[0]== 'SF':
-            urldef ='https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=1088550471&single=true&output=csv'
+                Pos_vs_def = se_sf
         elif Pos[0] == 'PF':
-            urldef ='https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=1638733906&single=true&output=csv'
+                Pos_vs_def = se_pf
         elif Pos[0] == 'C':
-            urldef ='https://docs.google.com/spreadsheets/d/e/2PACX-1vT66hjhOQ8WyIQL67ihWKOcukBbwPVUUAt8cvYqTkGbnZTgo4XNPtgIknKyleZBL9O_KatA05BJECBl/pub?gid=831757291&single=true&output=csv'
+                Pos_vs_def = se_c
 
-        Pos_vs_def = pd.read_csv(urldef)
+     
         
         len(df)
         dftb = df[7]
