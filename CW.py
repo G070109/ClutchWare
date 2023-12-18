@@ -7,6 +7,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 import html5lib
 import requests
+from bs4 import BeautifulSoup
 
 from PIL import Image
 
