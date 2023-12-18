@@ -85,10 +85,10 @@ if a:
         len(df)
         dftb = df[7]
         st.table(dftb)
-        """try:
+        try:
             dfplayer = dftb.drop(dftb.index [[20,41,62]])
         except IndexError:
-            dfplayer = dftb.drop(dftb.index [[20]])"""
+            dfplayer = dftb.drop(dftb.index [[20]])
 
 
         if Prop_in[0] == "PTS":
