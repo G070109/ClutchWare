@@ -47,6 +47,21 @@ def Extraer_inicial(cadena, n1=1):
     esp1 = Player_nm.index(' ')
     return cadena[esp1 + 1:esp1 + n1 + 1]
 Player_nm_l = Player_nm.lower()
+def getDatos(n,arr):
+
+   while n < 840:
+
+     ndex = data[n]
+     arr.append(ndex)
+     n = n + 28
+
+   return arr
+ar_season_ov = []
+ar_season_pg = []
+ar_season_sg = []
+ar_season_sf = []
+ar_season_pf = []
+ar_season_c = []
 
 a=st.sidebar.button("Analyze")
 if a:
@@ -65,8 +80,43 @@ if a:
                 
                                 
                 
-         
-         
+
+"""Extraer Datos tabla"""
+        response = requests.get("https://www.fantasypros.com/nba/defense-vs-position.php")
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        data = []
+        table = soup.find('table')
+        table_body = table.find('tbody')
+
+        rows = table.find_all('tr')
+        for row in rows:
+        cols = row.find_all(['td', 'th'])
+        cols = [ele.text.strip() for ele in cols]
+        data.append([ele for ele in cols if ele])
+
+        cols = data[0]
+
+        se_ov = pd.DataFrame(getDatos(1,ar_season_ov))
+        se_ov.columns=cols
+        st.table(se_ov)
+        se_pg = pd.DataFrame(getDatos(13,ar_season_pg))
+        se_pg.columns=cols
+
+        se_sg = pd.DataFrame(getDatos(21,ar_season_sg))
+        se_sg.columns=cols
+
+        se_sf = pd.DataFrame(getDatos(17,ar_season_sf))
+        se_sf.columns=cols
+
+        se_pf = pd.DataFrame(getDatos(9,ar_season_pf))
+        se_pf.columns=cols
+
+        se_c = pd.DataFrame(getDatos(5,ar_season_c))
+        se_c.columns=cols
+
+
+                
                 
           
 
