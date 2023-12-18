@@ -100,7 +100,7 @@ if a:
 
         se_ov = pd.DataFrame(getDatos(1,ar_season_ov))
         se_ov.columns=cols
-        st.table(se_ov)
+       
         se_pg = pd.DataFrame(getDatos(13,ar_season_pg))
         se_pg.columns=cols
 
