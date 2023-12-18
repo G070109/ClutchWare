@@ -81,7 +81,7 @@ if a:
                                 
                 
 
-"""Extraer Datos tabla"""
+
         response = requests.get("https://www.fantasypros.com/nba/defense-vs-position.php")
         soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -91,11 +91,11 @@ if a:
 
         rows = table.find_all('tr')
         for row in rows:
-        cols = row.find_all(['td', 'th'])
-        cols = [ele.text.strip() for ele in cols]
-        data.append([ele for ele in cols if ele])
+                cols = row.find_all(['td', 'th'])
+                cols = [ele.text.strip() for ele in cols]
+                data.append([ele for ele in cols if ele])
 
-        cols = data[0]
+                cols = data[0]
 
         se_ov = pd.DataFrame(getDatos(1,ar_season_ov))
         se_ov.columns=cols
