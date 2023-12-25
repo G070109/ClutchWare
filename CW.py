@@ -98,22 +98,22 @@ if a:
 
                 cols = data[0]
 
-        se_ov = pd.DataFrame(getDatos(1,ar_season_ov))
+        se_ov = pd.DataFrame(getDatos(2,ar_season_ov))
         se_ov.columns=cols
        
-        se_pg = pd.DataFrame(getDatos(13,ar_season_pg))
+        se_pg = pd.DataFrame(getDatos(14,ar_season_pg))
         se_pg.columns=cols
 
-        se_sg = pd.DataFrame(getDatos(21,ar_season_sg))
+        se_sg = pd.DataFrame(getDatos(22,ar_season_sg))
         se_sg.columns=cols
 
-        se_sf = pd.DataFrame(getDatos(17,ar_season_sf))
+        se_sf = pd.DataFrame(getDatos(18,ar_season_sf))
         se_sf.columns=cols
 
-        se_pf = pd.DataFrame(getDatos(9,ar_season_pf))
+        se_pf = pd.DataFrame(getDatos(10,ar_season_pf))
         se_pf.columns=cols
 
-        se_c = pd.DataFrame(getDatos(5,ar_season_c))
+        se_c = pd.DataFrame(getDatos(6,ar_season_c))
         se_c.columns=cols
 
 
