@@ -5,7 +5,6 @@ import tensorflow as tf
 import lxml
 import plotly.graph_objects as go
 import plotly.express as px
-import html5lib
 import requests
 from bs4 import BeautifulSoup
 
